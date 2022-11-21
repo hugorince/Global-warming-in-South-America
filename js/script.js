@@ -38,4 +38,7 @@ const theFunction = () => {
 	.then(response => console.log(response.hourly.temperature_2m))
 
 
-	kopskdpfolk
+//testDeMohamed
+
+kopskdpfolk
+
