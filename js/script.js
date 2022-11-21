@@ -1,19 +1,11 @@
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-// 		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
-// 	}
-// };
-
-
-
 const refresh = () => {
 	setTimeout('theFunction()', 10000)
 }
 
 const fonctionGlobale = () => {
 
+	//Debut de la partie à copier
+	//Nom du Pays : Nigeria
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=10.00&longitude=8.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
 	.then(temp => {
@@ -28,17 +20,14 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
+		//Fin de la partie à copier
 	}
 	fonctionGlobale()
 
-	//.catch(err => console.error(err));
-
-	fetch('https://api.open-meteo.com/v1/gfs?latitude=39.74&longitude=-104.98&hourly=temperature_2m&forecast_days=1')
-	.then(response => response.json())
-	.then(response => console.log(response.hourly.temperature_2m))
 
 
-//testDeMohamed
+	//fetch('https://api.open-meteo.com/v1/gfs?latitude=39.74&longitude=-104.98&hourly=temperature_2m&forecast_days=1')
+	//.then(response => response.json())
+	//.then(response => console.log(response.hourly.temperature_2m))
 
-kopskdpfolk
 
