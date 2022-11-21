@@ -37,3 +37,8 @@ const theFunction = () => {
 	.then(response => response.json())
 	.then(response => console.log(response.hourly.temperature_2m))
 
+
+//testDeMohamed
+
+kopskdpfolk
+
