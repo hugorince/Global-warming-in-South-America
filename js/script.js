@@ -12,7 +12,7 @@ const refresh = () => {
 	setTimeout('theFunction()', 10000)
 }
 
-const theFunction = () => {
+const fonctionGlobale = () => {
 
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=10.00&longitude=8.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
@@ -23,13 +23,13 @@ const theFunction = () => {
 		console.log(hour)
 		for (let i = 0 ; i < tempa.length; i++){
 			if (i === hour){
-				document.getElementById('temp').innerHTML = "Denver's temperature " + tempa[i]
+				document.getElementById('nigeria').innerHTML = "Nigeria's temperature " + tempa[i]
 				refresh()
 			}
 		}
 		})
 	}
-	theFunction()
+	fonctionGlobale()
 
 	//.catch(err => console.error(err));
 
