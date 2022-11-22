@@ -10,6 +10,7 @@ const fonctionGlobale = () => {
 	console.log(hour)
 
 	//Debut de la partie à copier
+	
 	//Nom du Pays : Peru
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=-10.00&longitude=-75.25&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
@@ -22,9 +23,7 @@ const fonctionGlobale = () => {
 				}
 		}
 		})
-		//Fin de la partie à copier
-
-		//Nom du Pays : Uruguay
+	//Nom du Pays : Uruguay
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=-33.00&longitude=-56.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
 	.then(temp => {
@@ -36,9 +35,7 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
-		//Fin de la partie à copier
-
-			//Nom du Pays : Brazil
+	//Nom du Pays : Brazil
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=-10.00&longitude=-55.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
 	.then(temp => {
@@ -51,9 +48,7 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
-		//Fin de la partie à copier
-
-				//Nom du Pays : French Guyana
+	//Nom du Pays : French Guyana
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=4.00&longitude=-53.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
 	.then(temp => {
@@ -65,9 +60,7 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
-		//Fin de la partie à copier
-
-				//Nom du Pays : Suriname
+	//Nom du Pays : Suriname
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=4.00&longitude=-56.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
 	.then(temp => {
@@ -78,9 +71,6 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
-		//Fin de la partie à copier
-
-		//Debut de la partie à copier
 	//Nom du Pays : Bolivia
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=-17.00&longitude=-65.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
@@ -92,9 +82,6 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
-		//Fin de la partie à copier
-
-		//Debut de la partie à copier
 	//Nom du Pays : Paraguay
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=-23.33&longitude=-58.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
@@ -106,9 +93,6 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
-		//Fin de la partie à copier
-
-		//Debut de la partie à copier
 	//Nom du Pays : Chile
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=-30.00&longitude=-71.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
@@ -120,9 +104,6 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
-		//Fin de la partie à copier
-
-		//Debut de la partie à copier
 	//Nom du Pays : Argentina
 	fetch('https://api.open-meteo.com/v1/gfs?latitude=-34.00&longitude=-64.00&hourly=temperature_2m&forecast_days=1')
 	.then(response => response.json())
@@ -134,8 +115,6 @@ const fonctionGlobale = () => {
 			}
 		}
 		})
-		//Fin de la partie à copier
-
 	}
 	fonctionGlobale()
 
