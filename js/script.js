@@ -137,18 +137,18 @@ const fonctionGlobale = () => {
 								console.log(past.hourly.temperature_2m[i])
 							
 								document.getElementById('venezuela').innerHTML = "Venezuela's temperature : " + actualTemp + "    and Caracas's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
-									document.getElementById('Venezuela').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
-									document.getElementById('Venezuela').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
-									document.getElementById('Venezuela').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
-									document.getElementById('Venezuela').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
-									document.getElementById('Venezuela').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
-									document.getElementById('Venezuela').style.color='rgb(146, 3, 3)';
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
+									document.getElementById('venezuela').style.color='rgb(33, 15, 148)';
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
+									document.getElementById('venezuela').style.color='rgb(132, 213, 253)';
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
+									document.getElementById('venezuela').style.color='rgb(237, 253, 132)';
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
+									document.getElementById('venezuela').style.color='rgb(247, 156, 65)';
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
+									document.getElementById('venezuela').style.color='rgb(233, 30, 23)';
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
+									document.getElementById('venezuela').style.color='rgb(146, 3, 3)';
 								 }
 							}
 
@@ -181,17 +181,18 @@ const fonctionGlobale = () => {
 							if (compare[i] === pastDate) {
 								console.log(past.hourly.temperature_2m[i])
 								document.getElementById('peru').innerHTML = "Peru's temperature : " + actualTemp + "    and Lima's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
+								
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('peru').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('peru').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('peru').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('peru').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('peru').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('peru').style.color='rgb(146, 3, 3)';
 								 }
 							}
@@ -224,19 +225,19 @@ const fonctionGlobale = () => {
 							if (compare[i] === pastDate) {
 								console.log(past.hourly.temperature_2m[i])
 								document.getElementById('uruguay').innerHTML = "Uruguay's temperature : " + actualTemp + "    and Montevideo's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('uruguay').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('uruguay').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('uruguay').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('uruguay').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('uruguay').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('uruguay').style.color='rgb(146, 3, 3)';
-								 }		
+								 }
 							}
 						}
 					})
@@ -266,17 +267,17 @@ const fonctionGlobale = () => {
 							if (compare[i] === pastDate) {
 								console.log(past.hourly.temperature_2m[i])
 								document.getElementById('brazil').innerHTML = "Brazil's temperature : " + actualTemp + "    and Brasilia's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('brazil').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('brazil').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('brazil').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('brazil').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('brazil').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('brazil').style.color='rgb(146, 3, 3)';
 								 }
 							}
@@ -309,17 +310,17 @@ const fonctionGlobale = () => {
 							if (compare[i] === pastDate) {
 								console.log(past.hourly.temperature_2m[i])
 								document.getElementById('suriname').innerHTML = "Suriname's temperature : " + actualTemp + "    and Paramaribo's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('suriname').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('suriname').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('suriname').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('suriname').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('suriname').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('suriname').style.color='rgb(146, 3, 3)';
 								 }
 							}
@@ -352,17 +353,17 @@ const fonctionGlobale = () => {
 							if (compare[i] === pastDate) {
 								console.log(past.hourly.temperature_2m[i])
 								document.getElementById('bolivia').innerHTML = "Bolivia's temperature : " + actualTemp + "    and Sucre's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('bolivia').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('bolivia').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('bolivia').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('bolivia').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('bolivia').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('bolivia').style.color='rgb(146, 3, 3)';
 								 }
 							}
@@ -394,17 +395,17 @@ const fonctionGlobale = () => {
 							if (compare[i] === pastDate) {
 								console.log(past.hourly.temperature_2m[i])
 								document.getElementById('paraguay').innerHTML = "Paraguay's temperature : " + actualTemp + "    and Asuncion's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('paraguay').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('paraguay').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('paraguay').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('paraguay').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('paraguay').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('paraguay').style.color='rgb(146, 3, 3)';
 								 }
 							}
@@ -436,17 +437,17 @@ const fonctionGlobale = () => {
 							if (compare[i] === pastDate) {
 								console.log(past.hourly.temperature_2m[i])
 								document.getElementById('chile').innerHTML = "Chile's temperature : " + actualTemp + "    and Sanitago's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('chile').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('chile').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('chile').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('chile').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('chile').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('chile').style.color='rgb(146, 3, 3)';
 								 }
 							}
@@ -478,17 +479,17 @@ const fonctionGlobale = () => {
 							if (compare[i] === pastDate) {
 								console.log(past.hourly.temperature_2m[i])
 								document.getElementById('argentina').innerHTML = "Argentina's temperature : " + actualTemp + "    and Buenos Aires's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								if (tempa[i]<(-10)){
+								if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('argentina').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('argentina').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('argentina').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('argentina').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('argentina').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('argentina').style.color='rgb(146, 3, 3)';
 								 }
 							}
@@ -520,17 +521,17 @@ const fonctionGlobale = () => {
 							  if (compare[i] === pastDate) {
 								  console.log(past.hourly.temperature_2m[i])
 								  document.getElementById('colombia').innerHTML = "Colombia's temperature : " + actualTemp + "    and Bogota's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								  if (tempa[i]<(-10)){
+								  if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('colombia').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('colombia').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('colombia').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('colombia').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('colombia').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('colombia').style.color='rgb(146, 3, 3)';
 								 }
 								}
@@ -562,17 +563,17 @@ const fonctionGlobale = () => {
 							  if (compare[i] === pastDate) {
 								  console.log(past.hourly.temperature_2m[i])
 								  document.getElementById('guyana').innerHTML = "Guyana's temperature : " + actualTemp + "    and Georgetown's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-								  if (tempa[i]<(-10)){
+								  if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 									document.getElementById('guyana').style.color='rgb(33, 15, 148)';
-								 } else if (tempa[i]<= 0) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 									document.getElementById('guyana').style.color='rgb(132, 213, 253)';
-								 } else if (tempa[i]<= 10) {
+								 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 									document.getElementById('guyana').style.color='rgb(237, 253, 132)';
-								 }else if (tempa[i]<= 20) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 									document.getElementById('guyana').style.color='rgb(247, 156, 65)';
-								 }else if (tempa[i]<= 29) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 									document.getElementById('guyana').style.color='rgb(233, 30, 23)';
-								 }else if (tempa[i]>= 30) {
+								 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 									document.getElementById('guyana').style.color='rgb(146, 3, 3)';
 								 }
 								}
@@ -604,17 +605,17 @@ const fonctionGlobale = () => {
 						  if (compare[i] === pastDate) {
 							  console.log(past.hourly.temperature_2m[i])
 							  document.getElementById('ecuador').innerHTML = "Ecuador's temperature : " + actualTemp + "    and Quito's AQI : " + data.overall_aqi + '    and Temperature in 1962 at the same time : ' + past.hourly.temperature_2m[i]
-							  if (tempa[i]<(-10)){
+							  if ((actualTemp - past.hourly.temperature_2m[i]) < 0){
 								document.getElementById('ecuador').style.color='rgb(33, 15, 148)';
-							 } else if (tempa[i]<= 0) {
+							 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 2) {
 								document.getElementById('ecuador').style.color='rgb(132, 213, 253)';
-							 } else if (tempa[i]<= 10) {
+							 } else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 4) {
 								document.getElementById('ecuador').style.color='rgb(237, 253, 132)';
-							 }else if (tempa[i]<= 20) {
+							 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 7) {
 								document.getElementById('ecuador').style.color='rgb(247, 156, 65)';
-							 }else if (tempa[i]<= 29) {
+							 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 0 && (actualTemp - past.hourly.temperature_2m[i]) < 10) {
 								document.getElementById('ecuador').style.color='rgb(233, 30, 23)';
-							 }else if (tempa[i]>= 30) {
+							 }else if ((actualTemp - past.hourly.temperature_2m[i]) > 10) {
 								document.getElementById('ecuador').style.color='rgb(146, 3, 3)';
 							 }
 							}
