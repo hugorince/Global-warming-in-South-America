@@ -1,4 +1,10 @@
 h1 {
     color: rgb(71, 145, 71);
     background-color: rgb(140, 222, 140);
+
+}
+img{ 
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }
