@@ -3,8 +3,22 @@ h1 {
     background-color: rgb(140, 222, 140);
 
 }
-img{ 
+div.relative{ 
+    position: relative;
     max-width: 100%;
     height: auto;
     width: auto;
+    z-index: 2;
+}
+
+div.absolute{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    z-index: 1;
+  
+
 }
