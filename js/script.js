@@ -9,6 +9,29 @@ const refresh = () => {
 
 //FONCTION DE FETCH PAR COUNTRY
 
+function assignColor(c1, c2, c3, c4, c5, c6, temp, moy){
+	if ((temp - moy) <= 0){
+		document.getElementById(c1).style.zIndex=3;
+		console.log("test position1")
+	 } else if ((temp - moy) > 0 && (temp - moy) < 2) {
+		document.getElementById(c2).style.zIndex=3;
+		console.log("test position2")
+	 } else if ((temp - moy) > 0 && (temp - moy) < 4) {
+		document.getElementById(c3).style.zIndex=3;
+		console.log("test position3")
+	 }else if ((temp - moy) > 0 && (temp - moy) < 7) {
+		document.getElementById(c4).style.zIndex=3;
+		console.log("test position4")
+	 }else if ((temp - moy) > 0 && (temp - moy) < 10) {
+		document.getElementById(c5).style.zIndex=3;
+		console.log("test position5")
+	 }else if ((temp - moy) > 10) {
+		document.getElementById(c6).style.zIndex=3;
+		console.log("test position6", (temp - moy));
+
+	 }
+	}
+
 const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 	
 	//VARIABLES FOR TODAY
@@ -165,28 +188,50 @@ const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 
 											
 							document.getElementById(countryName).innerHTML = countryName +  " 's temperature : " + actualTemp + "    and its Capital's AQI : " + data.overall_aqi + "    moyenne de temperature dans les 60's : " + moyenne
-								
-								if ((actualTemp - moyenne) <= 0){
-									document.getElementById(countryName).style.color='rgb(33, 15, 148)';
-								 } else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 2) {
-									document.getElementById(countryName).style.color='rgb(132, 213, 253)';
-								 } else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 4) {
-									document.getElementById(countryName).style.color='rgb(237, 253, 132)';
-								 }else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 7) {
-									document.getElementById(countryName).style.color='rgb(247, 156, 65)';
-								 }else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 10) {
-									document.getElementById(countryName).style.color='rgb(233, 30, 23)';
-								 }else if ((actualTemp - moyenne) > 10) {
-									document.getElementById(countryName).style.color='rgb(146, 3, 3)';
-								 }
+							if (countryName == "paraguay"){ 
+							assignColor("pJP", "pJ", "pOP", "pO", "pRP", "pR", actualTemp, moyenne)};
+							
+							if (countryName == "guyana"){ 
+							assignColor("gJP", "gJ", "gOP", "gO", "gRP", "gR", actualTemp, moyenne)};
+
+							if (countryName == "brazil"){ 
+								assignColor("bJP", "bJ", "bOP", "bO", "bRP", "bR", actualTemp, moyenne)};
+
+							if (countryName == "argentina"){ 
+							assignColor("aJP", "aJ", "aOP", "aO", "aRP", "aR", actualTemp, moyenne)};
+						
+							if (countryName == "bolivia"){ 
+								assignColor("boJP", "boJ", "gOP", "gO", "gRP", "gR", actualTemp, moyenne)};
+
+							if (countryName == "Chile"){ 
+								assignColor("cJP", "cJ", "cOP", "cO", "cRP", "cR", actualTemp, moyenne)};
+
+							if (countryName == "colombia"){ 
+								assignColor("coJP", "coJ", "coOP", "coO", "coRP", "coR", actualTemp, moyenne)};
+
+							if (countryName == "ecuador"){ 
+								assignColor("eJP", "eJ", "eOP", "eO", "eRP", "eR", actualTemp, moyenne)};
+						
+							if (countryName == "peru"){ 
+								assignColor("peJP", "peJ", "peOP", "peO", "peRP", "peR", actualTemp, moyenne)};
+
+							if (countryName == "suriname"){ 
+								assignColor("sJP", "sJ", "sOP", "sO", "sRP", "sR", actualTemp, moyenne)};
+							
+							if (countryName == "uruguay"){ 
+								assignColor("uJP", "uJ", "uOP", "uO", "uRP", "uR", actualTemp, moyenne)};
+
+							if (countryName == "venezuela"){ 
+								assignColor("vJP", "vJ", "vOP", "vO", "vRP", "vR", actualTemp, moyenne)};
+							
+							 
 
 ///////////////////////////////////////////////////////////
 
 								}
 						)})}}})}
 
-
-
+	
 //VARIABLES
 /////////////////////////////////////////////////////////////////////
 

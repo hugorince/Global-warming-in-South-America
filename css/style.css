@@ -8,7 +8,7 @@ div.relative{
     max-width: 100%;
     height: auto;
     width: auto;
-    z-index: 2;
+    z-index: 0;
 }
 
 div.absolute{
@@ -19,6 +19,6 @@ div.absolute{
     height: auto;
     width: auto;
     z-index: 1;
-  
-
 }
+
+
