@@ -31,6 +31,15 @@ function assignColor(c1, c2, c3, c4, c5, c6, temp, moy){
 
 	 }
 	}
+function displayInfo(name) {
+	const textInfo = document.getElementById(name)
+	textInfo.style.display = "block"
+}
+
+function stopDisplay(name) {
+	const textInfo = document.getElementById(name)
+	textInfo.style.display = "none"
+}
 
 const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 	
@@ -100,7 +109,7 @@ const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 	if (hour < 10){
 	pastDate1970 = '1970-' + month + '-' + day + 'T' + '0' + hour + ':00'
 	}
-
+	console.log(pastDate1961)
 
 
 	
@@ -186,7 +195,8 @@ const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 						
 ///////////////////////////////CHANGE EFFECT OF FUNCTION HERE
 
-											
+							displayInfo(countryName)
+							
 							document.getElementById(countryName).innerHTML = countryName +  " 's temperature : " + actualTemp + "    and its Capital's AQI : " + data.overall_aqi + "    moyenne de temperature dans les 60's : " + moyenne
 							if (countryName == "paraguay"){ 
 							assignColor("pJP", "pJ", "pOP", "pO", "pRP", "pR", actualTemp, moyenne)};
@@ -225,6 +235,20 @@ const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 								assignColor("vJP", "vJ", "vOP", "vO", "vRP", "vR", actualTemp, moyenne)};
 							
 							 
+							document.getElementById(countryName).style.display = "none"
+								if ((actualTemp - moyenne) <= 0){
+									document.getElementById(countryName).style.color='rgb(33, 15, 148)';
+								 } else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 2) {
+									document.getElementById(countryName).style.color='rgb(132, 213, 253)';
+								 } else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 4) {
+									document.getElementById(countryName).style.color='rgb(237, 253, 132)';
+								 }else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 7) {
+									document.getElementById(countryName).style.color='rgb(247, 156, 65)';
+								 }else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 10) {
+									document.getElementById(countryName).style.color='rgb(233, 30, 23)';
+								 }else if ((actualTemp - moyenne) > 10) {
+									document.getElementById(countryName).style.color='rgb(146, 3, 3)';
+								 }
 
 ///////////////////////////////////////////////////////////
 
@@ -327,6 +351,9 @@ const apiQuitoAqi = 'https://api.api-ninjas.com/v1/airquality?city=quito'
 
 
 // FONCTION PRINCIPALE
+
+
+
 const fonctionGlobale = () => {
 
 	//COUNTRY : Venezuela
@@ -367,9 +394,5 @@ const fonctionGlobale = () => {
 
 	}
   fonctionGlobale()
-
-  fetch(apiVenezuelaPast)
-         .then(res => res.json())
-         .then(past => console.log(past))
 
 

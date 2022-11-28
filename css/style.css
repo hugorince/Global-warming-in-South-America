@@ -1,24 +1,70 @@
+
+body {
+    background-color: lightblue;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 h1 {
     color: rgb(71, 145, 71);
     background-color: rgb(140, 222, 140);
-
 }
+
+.textBox{
+    border-color: black;
+    border-style: dashed;
+    border-radius: 1rem;
+    background-color: white;
+    width: 20rem;
+    height:10rem;
+    z-index: 1;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+img {
+    height: 50rem;
+}
+
+#flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#graphics{
+    position: absolute;
+    left: 25%;
+    max-height: 50%;
+}
+
 div.relative{ 
     position: relative;
-    max-width: 100%;
-    height: auto;
+    max-height: 100%;
     width: auto;
     z-index: 0;
 }
+
 
 div.absolute{
     position: absolute;
     top: 0px;
     left: 0px;
-    max-width: 100%;
-    height: auto;
+    height: 8px;
     width: auto;
     z-index: 1;
 }
 
-
+#informationsRight{
+    position: absolute;
+    left: 68%;
+    top: 50%;
+    max-width: 25%;
+}
+#informationsLeft{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    max-width: 25%;
+}
