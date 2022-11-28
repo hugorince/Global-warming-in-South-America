@@ -9,6 +9,16 @@ const refresh = () => {
 
 //FONCTION DE FETCH PAR COUNTRY
 
+function displayInfo(name) {
+	const textInfo = document.getElementById(name)
+	textInfo.style.display = "block"
+}
+
+function stopDisplay(name) {
+	const textInfo = document.getElementById(name)
+	textInfo.style.display = "none"
+}
+
 const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 	
 	//VARIABLES FOR TODAY
@@ -77,7 +87,7 @@ const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 	if (hour < 10){
 	pastDate1970 = '1970-' + month + '-' + day + 'T' + '0' + hour + ':00'
 	}
-
+	console.log(pastDate1961)
 
 
 	
@@ -163,9 +173,11 @@ const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 						
 ///////////////////////////////CHANGE EFFECT OF FUNCTION HERE
 
-											
+							displayInfo(countryName)
+							
 							document.getElementById(countryName).innerHTML = countryName +  " 's temperature : " + actualTemp + "    and its Capital's AQI : " + data.overall_aqi + "    moyenne de temperature dans les 60's : " + moyenne
-								
+							i
+							document.getElementById(countryName).style.display = "none"
 								if ((actualTemp - moyenne) <= 0){
 									document.getElementById(countryName).style.color='rgb(33, 15, 148)';
 								 } else if ((actualTemp - moyenne) > 0 && (actualTemp - moyenne) < 2) {
@@ -282,6 +294,9 @@ const apiQuitoAqi = 'https://api.api-ninjas.com/v1/airquality?city=quito'
 
 
 // FONCTION PRINCIPALE
+
+
+
 const fonctionGlobale = () => {
 
 	//COUNTRY : Venezuela
@@ -322,9 +337,5 @@ const fonctionGlobale = () => {
 
 	}
   fonctionGlobale()
-
-  fetch(apiVenezuelaPast)
-         .then(res => res.json())
-         .then(past => console.log(past))
 
 
