@@ -277,7 +277,7 @@ async function fetchCountry(countryName, apiToday, apiAqi, apiPast){
 							};
 							
 							if (countryName == 'frenchGuiana'){
-								document.getElementById(countryName).innerHTML = 'No data available'
+								document.getElementById(countryName).innerHTML = '. ' + 'No data available' + ' .'
 							}
 								 
 							document.getElementById(countryName).style.display = "none"

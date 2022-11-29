@@ -1,26 +1,28 @@
 
 body {
-    background-color: lightblue;
-    
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(113, 158, 206);
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
 }
 
 h1 {
-    color: rgb(71, 145, 71);
-    background-color: rgb(140, 222, 140);
+    color: rgb(255, 255, 255);
+    font-family: 'Amatic SC', 'Amatic';
+
+    
 }
 
 .textBox{
     border-color: black;
-    border-style: dashed;
     border-radius: 1rem;
     background-color: white;
-    width: 20rem;
-    height:10rem;
-    z-index: 1;
+    z-index: 5;
     text-align: center;
-    align-items: center;
-    margin-inline: 1rem;
+    font-family: 'Amatic SC', 'Amatic';
+    font-size: larger;
+    margin-inline: 10px;
+    
+   
 }
 
 img {
@@ -37,6 +39,7 @@ img {
     position: absolute;
     left: 25%;
     max-height: 50%;
+    top: -3rem;
 }
 
 div.relative{ 
@@ -44,6 +47,7 @@ div.relative{
     max-height: 100%;
     width: auto;
     z-index: 0;
+    top:-2rem;
 }
 
 
@@ -59,12 +63,66 @@ div.absolute{
 #informationsRight{
     position: absolute;
     left: 68%;
-    top: 50%;
+    top: 38%;
     max-width: 25%;
+    z-index: 2;
 }
 #informationsLeft{
     position: absolute;
-    left: 5%;
-    top: 50%;
+    left: 3%;
+    top: 38%;
     max-width: 25%;
+    z-index: 2;
+}
+
+/* div.vagues{
+    position: relative;
+} */
+
+#vagueanime{
+    height: 8rem;
+    position: absolute;
+    top: 5rem;
+	left: -15rem;
+    z-index: 1;
+}
+
+#vagueanime2{
+    height: 8rem;
+    position: absolute;
+    top: 5rem;
+	left: 40rem;
+    z-index: 1;
+}
+
+#vagueanime3{
+    height: 8rem;
+    position: absolute;
+    top: 20rem;
+	left: -25rem;
+    z-index: 1;
+}
+
+#vagueanime4{
+    height: 8rem;
+    position: absolute;
+    top: 20rem;
+	left: 50rem;
+    z-index: 1;
+}
+
+#vagueanime5{
+    height: 8rem;
+    position: absolute;
+    top: 35rem;
+	left: -8rem;
+    z-index: 1;
+}
+
+#vagueanime6{
+    height: 8rem;
+    position: absolute;
+    top: 35rem;
+	left: 35rem;
+    z-index: 1;
 }
