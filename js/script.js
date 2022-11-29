@@ -236,7 +236,7 @@ const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 								assignColor("vJP", "vJ", "vOP", "vO", "vRP", "vR", actualTemp, moyenne)};
 							
 							if (countryName == 'frenchGuiana'){
-								document.getElementById(countryName).innerHTML = 'No data available'
+								document.getElementById(countryName).innerHTML = '. ' + 'No data available' + ' .'
 							}
 							
 							 
