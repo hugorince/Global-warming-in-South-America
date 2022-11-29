@@ -126,3 +126,23 @@ div.absolute{
 	left: 35rem;
     z-index: 1;
 }
+
+#bar{
+    border-color: black;
+    background-color: white;
+    border-width: .25rem;
+    width: 30rem;
+    height: 1rem;
+    border-style: solid;
+    border-radius: 1rem;
+    display: flex;
+    
+}
+
+div.bars{
+    width: 3rem;
+    height: 1rem;
+    background-color: red;
+    z-index: -1;
+    
+}

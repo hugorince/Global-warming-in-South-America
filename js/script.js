@@ -12,31 +12,241 @@ function assignColor(c1, c2, c3, c4, c5, c6, temp, moy){
 		document.getElementById(c1).style.zIndex=3;
 		console.log("test position1")
 		counter += 1
+		document.getElementById('bar1').style.zIndex=3
+		if (counter === 2) {
+			document.getElementById('bar2').style.zIndex=3
+		}
+		if (counter === 3) {
+			document.getElementById('bar3').style.zIndex=3
+		}
+		if (counter === 4) {
+			document.getElementById('bar4').style.zIndex=3
+		}
+		if (counter === 5) {
+			document.getElementById('bar5').style.zIndex=3
+		}
+		if (counter === 6) {
+			document.getElementById('bar6').style.zIndex=3
+		}
+		if (counter === 7) {
+			document.getElementById('bar7').style.zIndex=3
+		}
+		if (counter === 8) {
+			document.getElementById('bar8').style.zIndex=3
+		}
+		if (counter === 9) {
+			document.getElementById('bar9').style.zIndex=3
+		}
+		if (counter === 10) {
+			document.getElementById('bar10').style.zIndex=3
+		}
+		if (counter === 11) {
+			document.getElementById('bar11').style.zIndex=3
+		}
+		if (counter === 12) {
+			document.getElementById('bar12').style.zIndex=3
+			document.getElementById('bar').style.display = 'none'
+		}
 		console.log('counter = ', counter)
 	 } else if ((temp - moy) > 0 && (temp - moy) < 2) {
 		document.getElementById(c2).style.zIndex=3;
 		console.log("test position2")
 		counter += 1
+		document.getElementById('bar1').style.zIndex=3
+		if (counter === 2) {
+			document.getElementById('bar2').style.zIndex=3
+		}
+		if (counter === 3) {
+			document.getElementById('bar3').style.zIndex=3
+		}
+		if (counter === 4) {
+			document.getElementById('bar4').style.zIndex=3
+		}
+		if (counter === 5) {
+			document.getElementById('bar5').style.zIndex=3
+		}
+		if (counter === 6) {
+			document.getElementById('bar6').style.zIndex=3
+		}
+		if (counter === 7) {
+			document.getElementById('bar7').style.zIndex=3
+		}
+		if (counter === 8) {
+			document.getElementById('bar8').style.zIndex=3
+		}
+		if (counter === 9) {
+			document.getElementById('bar9').style.zIndex=3
+		}
+		if (counter === 10) {
+			document.getElementById('bar10').style.zIndex=3
+		}
+		if (counter === 11) {
+			document.getElementById('bar11').style.zIndex=3
+		}
+		if (counter === 12) {
+			document.getElementById('bar12').style.zIndex=3
+			document.getElementById('bar').style.display = 'none'
+		}
 		console.log('counter = ', counter)
 	 } else if ((temp - moy) > 0 && (temp - moy) < 4) {
 		document.getElementById(c3).style.zIndex=3;
 		console.log("test position3")
 		counter += 1
+		document.getElementById('bar1').style.zIndex=3
+		if (counter === 2) {
+			document.getElementById('bar2').style.zIndex=3
+		}
+		if (counter === 3) {
+			document.getElementById('bar3').style.zIndex=3
+		}
+		if (counter === 4) {
+			document.getElementById('bar4').style.zIndex=3
+		}
+		if (counter === 5) {
+			document.getElementById('bar5').style.zIndex=3
+		}
+		if (counter === 6) {
+			document.getElementById('bar6').style.zIndex=3
+		}
+		if (counter === 7) {
+			document.getElementById('bar7').style.zIndex=3
+		}
+		if (counter === 8) {
+			document.getElementById('bar8').style.zIndex=3
+		}
+		if (counter === 9) {
+			document.getElementById('bar9').style.zIndex=3
+		}
+		if (counter === 10) {
+			document.getElementById('bar10').style.zIndex=3
+		}
+		if (counter === 11) {
+			document.getElementById('bar11').style.zIndex=3
+		}
+		if (counter === 12) {
+			document.getElementById('bar12').style.zIndex=3
+			document.getElementById('bar').style.display = 'none'
+		}
 		console.log('counter = ', counter)
 	 }else if ((temp - moy) > 0 && (temp - moy) < 7) {
 		document.getElementById(c4).style.zIndex=3;
 		console.log("test position4")
 		counter += 1
+		document.getElementById('bar1').style.zIndex=3
+		if (counter === 2) {
+			document.getElementById('bar2').style.zIndex=3
+		}
+		if (counter === 3) {
+			document.getElementById('bar3').style.zIndex=3
+		}
+		if (counter === 4) {
+			document.getElementById('bar4').style.zIndex=3
+		}
+		if (counter === 5) {
+			document.getElementById('bar5').style.zIndex=3
+		}
+		if (counter === 6) {
+			document.getElementById('bar6').style.zIndex=3
+		}
+		if (counter === 7) {
+			document.getElementById('bar7').style.zIndex=3
+		}
+		if (counter === 8) {
+			document.getElementById('bar8').style.zIndex=3
+		}
+		if (counter === 9) {
+			document.getElementById('bar9').style.zIndex=3
+		}
+		if (counter === 10) {
+			document.getElementById('bar10').style.zIndex=3
+		}
+		if (counter === 11) {
+			document.getElementById('bar11').style.zIndex=3
+		}
+		if (counter === 12) {
+			document.getElementById('bar12').style.zIndex=3
+			document.getElementById('bar').style.display = 'none'
+		}
 		console.log('counter = ', counter)
 	 }else if ((temp - moy) > 0 && (temp - moy) < 10) {
 		document.getElementById(c5).style.zIndex=3;
 		console.log("test position5")
 		counter += 1
+		document.getElementById('bar1').style.zIndex=3
+		if (counter === 2) {
+			document.getElementById('bar2').style.zIndex=3
+		}
+		if (counter === 3) {
+			document.getElementById('bar3').style.zIndex=3
+		}
+		if (counter === 4) {
+			document.getElementById('bar4').style.zIndex=3
+		}
+		if (counter === 5) {
+			document.getElementById('bar5').style.zIndex=3
+		}
+		if (counter === 6) {
+			document.getElementById('bar6').style.zIndex=3
+		}
+		if (counter === 7) {
+			document.getElementById('bar7').style.zIndex=3
+		}
+		if (counter === 8) {
+			document.getElementById('bar8').style.zIndex=3
+		}
+		if (counter === 9) {
+			document.getElementById('bar9').style.zIndex=3
+		}
+		if (counter === 10) {
+			document.getElementById('bar10').style.zIndex=3
+		}
+		if (counter === 11) {
+			document.getElementById('bar11').style.zIndex=3
+		}
+		if (counter === 12) {
+			document.getElementById('bar12').style.zIndex=3
+			document.getElementById('bar').style.display = 'none'
+		}
 		console.log('counter = ', counter)
 	 }else if ((temp - moy) > 10) {
 		document.getElementById(c6).style.zIndex=3;
 		console.log("test position6", (temp - moy))
 		counter += 1
+		document.getElementById('bar1').style.zIndex=3
+		if (counter === 2) {
+			document.getElementById('bar2').style.zIndex=3
+		}
+		if (counter === 3) {
+			document.getElementById('bar3').style.zIndex=3
+		}
+		if (counter === 4) {
+			document.getElementById('bar4').style.zIndex=3
+		}
+		if (counter === 5) {
+			document.getElementById('bar5').style.zIndex=3
+		}
+		if (counter === 6) {
+			document.getElementById('bar6').style.zIndex=3
+		}
+		if (counter === 7) {
+			document.getElementById('bar7').style.zIndex=3
+		}
+		if (counter === 8) {
+			document.getElementById('bar8').style.zIndex=3
+		}
+		if (counter === 9) {
+			document.getElementById('bar9').style.zIndex=3
+		}
+		if (counter === 10) {
+			document.getElementById('bar10').style.zIndex=3
+		}
+		if (counter === 11) {
+			document.getElementById('bar11').style.zIndex=3
+		}
+		if (counter === 12) {
+			document.getElementById('bar12').style.zIndex=3
+			document.getElementById('bar').style.display = 'none'
+		}
 		console.log('counter = ', counter)
 	 }
 }
@@ -50,6 +260,20 @@ function stopDisplay(name) {
 	const textInfo = document.getElementById(name)
 	textInfo.style.display = "none"
 }
+
+// function displayProgressBar(){
+// 	document.getElementById('bar').style.display = 'block'
+// 	console.log(counter)
+// 	if (counter == 1) {
+// 		document.getElementById('bar1').style.display = 'block'
+		
+// 	} 
+// 	else if (counter == 2) {
+// 		document.getElementById('bar1').style.display = 'block'
+// 		document.getElementById('bar2').style.display = 'block'
+	
+// 	}
+// }
 
 async function fetchCountry(countryName, apiToday, apiAqi, apiPast){
 	
@@ -291,9 +515,11 @@ async function fetchCountry(countryName, apiToday, apiAqi, apiPast){
 
 //VARIABLES
 /////////////////////////////////////////////////////////////////////
+let counter = 0
+
 
 // API KEY FOR NINJAS-API
-let counter = 0
+
 
 const ninjaKey = {
     method: 'GET',
@@ -363,8 +589,9 @@ async function fonctionGlobale(){
 	fetchCountry('frenchGuiana', apiEcuadorToday, apiQuitoAqi, apiEcuadorPast)
 
 }
-
+//displayProgressBar()
 fonctionGlobale()
+
 
 
 
