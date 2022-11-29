@@ -235,6 +235,10 @@ const fetchCountry = (countryName, apiToday, apiAqi, apiPast) => {
 							if (countryName == "venezuela"){ 
 								assignColor("vJP", "vJ", "vOP", "vO", "vRP", "vR", actualTemp, moyenne)};
 							
+							if (countryName == 'frenchGuiana'){
+								document.getElementById(countryName).innerHTML = 'No data available'
+							}
+							
 							 
 							document.getElementById(countryName).style.display = "none"
 						
@@ -380,6 +384,10 @@ const fonctionGlobale = () => {
 		
     //Nom du Pays : Ecuador
 	fetchCountry('ecuador', apiEcuadorToday, apiQuitoAqi, apiEcuadorPast)
+
+	//Nom du Pays : French Guiana
+	fetchCountry('frenchGuiana', apiEcuadorToday, apiQuitoAqi, apiEcuadorPast)
+
 
 	}
   fonctionGlobale()
