@@ -350,7 +350,7 @@ fonctionGlobale()
 
 
 
-
-
+const funFacts = "L’endroit le plus profond de la mer n’a été visité que par trois personnes.  Quel est le comble pour un écolo ? Se mettre au vert...   DANEMARK : L’urine de festivaliers réutilisée pour cultiver de l’orge et brasser de la bière  Le pastis est écolo, car il préserve la couche d'eau jaune.   CHINE : Il crée une brique en aspirant les particules d’air pollué de Pékin. "
+document.getElementById("scroll-text").innerHTML = funFacts
 
 	
