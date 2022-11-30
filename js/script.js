@@ -113,17 +113,6 @@ async function fetchCountry(countryName, apiToday, apiAqi, apiPast){
 	}
 	console.log(pastDate1961)
 
-	let country1961 = 0
-	let country1962 = 0 
-	let country1963 = 0 
-	let country1964 = 0
-	let country1965 = 0
-	let country1966 = 0
-	let country1967 = 0
-	let country1968 = 0
-	let country1969 = 0
-	let country1970 = 0
-
 	async function fetchApiToday(){
 		const response = await fetch(apiToday)
 		const temp = await response.json()
@@ -190,70 +179,69 @@ async function fetchCountry(countryName, apiToday, apiAqi, apiPast){
 						else if (compare[i] === pastDate1970) {
 							country1970 = past.hourly.temperature_2m[i + 12]
 							console.log(countryName,'1970', country1970)
-						}
-					}
-
-							let moyenne = Math.round(((country1961 + country1962 + country1963 + country1964 + country1965 + country1966 + country1967 + country1968 + country1969 + country1970)*10)/10) / 10
-							console.log('la moyenne est : ', moyenne)
+						}}
+					
+						let moyenne = Math.round(((country1961 + country1962 + country1963 + country1964 + country1965 + country1966 + country1967 + country1968 + country1969 + country1970)*10)/10) / 10
+						console.log('la moyenne est : ', moyenne)
 					
 							if (countryName == "paraguay"){ 
-							assignColor("pJP", "pJ", "pOP", "pO", "pRP", "pR", actualTemp, moyenne)
-							document.getElementById(countryName).innerHTML = "La température actuelle au Paraguay est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Asuncion est de " + data.overall_aqi 
-						}
+								assignColor("pJP", "pJ", "pOP", "pO", "pRP", "pR", actualTemp, moyenne)
+								document.getElementById(countryName).innerHTML = "La température actuelle au Paraguay est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Asuncion est de " + '<b>' + data.overall_aqi + '</b>'
+							}
 							
 							if (countryName == "guyana"){ 
 								assignColor("gJP", "gJ", "gOP", "gO", "gRP", "gR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle en Guyane est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Georgetown est de " + data.overall_aqi 
-						}
+								document.getElementById(countryName).innerHTML = "La température actuelle en Guyane est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Georgetown est de " + '<b>' + data.overall_aqi + '</b>'
+							}
 
 							if (countryName == "brazil"){ 
 								assignColor("bJP", "bJ", "bOP", "bO", "bRP", "bR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle au Brésil est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Brasilia est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle au Brésil est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Brasilia est de " + '<b>' + data.overall_aqi + '</b>'
 							}
 
 							if (countryName == "argentina"){ 
-							assignColor("aJP", "aJ", "aOP", "aO", "aRP", "aR", actualTemp, moyenne)
-							document.getElementById(countryName).innerHTML = "La température actuelle en Argentine est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Buenos Aires est de " + data.overall_aqi 
-						}
+								assignColor("aJP", "aJ", "aOP", "aO", "aRP", "aR", actualTemp, moyenne)
+								document.getElementById(countryName).innerHTML = "La température actuelle en Argentine est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Buenos Aires est de " + '<b>' + data.overall_aqi + '</b>'
+							}
 						
 							if (countryName == "bolivia"){ 
 								assignColor("boJP", "boJ", "gOP", "gO", "gRP", "gR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle en Bolivie est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Sucre est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle en Bolivie est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Sucre est de " + '<b>' + data.overall_aqi + '</b>'
 							}
 
 							if (countryName == "chile"){ 
 								assignColor("cJP", "cJ", "cOP", "cO", "cRP", "cR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle au Chili est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Santiago est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle au Chili est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Santiago est de " + '<b>' + data.overall_aqi + '</b>'
 							}
 
 							if (countryName == "colombia"){ 
 								assignColor("coJP", "coJ", "coOP", "coO", "coRP", "coR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle en Colombie est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Bogota est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle en Colombie est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Bogota est de " + '<b>' + data.overall_aqi + '</b>' 
 							}
 
 							if (countryName == "ecuador"){ 
 								assignColor("eJP", "eJ", "eOP", "eO", "eRP", "eR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle en Équateur est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Quito est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle en Équateur est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Quito est de " + '<b>' + data.overall_aqi + '</b>'
 							}
 						
 							if (countryName == "peru"){ 
 								assignColor("peJP", "peJ", "peOP", "peO", "peRP", "peR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle au Pérou est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Lima est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle au Pérou est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Lima est de " + '<b>' + data.overall_aqi + '</b>'
 							}
 
 							if (countryName == "suriname"){ 
 								assignColor("sJP", "sJ", "sOP", "sO", "sRP", "sR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle au Suriname est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Paramaribo est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle au Suriname est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Paramaribo est de " + '<b>' + data.overall_aqi + '</b>' 
 							}
 							
 							if (countryName == "uruguay"){ 
 								assignColor("uJP", "uJ", "uOP", "uO", "uRP", "uR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle en Uruguay est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Montevideo est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle en Uruguay est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Montevideo est de " + '<b>' + data.overall_aqi + '</b>' 
 							}
 
 							if (countryName == "venezuela"){ 
 								assignColor("vJP", "vJ", "vOP", "vO", "vRP", "vR", actualTemp, moyenne)
-								document.getElementById(countryName).innerHTML = "La température actuelle au Venezuela est de " + actualTemp + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + moyenne + "°" + '<br>' + "L'indice de qualité de l'air à Caracas est de " + data.overall_aqi 
+								document.getElementById(countryName).innerHTML = "La température actuelle au Venezuela est de " + '<b>' + actualTemp + '</b>' + "°"+ '<br>'  + "la  moyenne de temperature dans les 60's était de " + '<b>' + moyenne +'</b>' + "°" + '<br>' + "L'indice de qualité de l'air à Caracas est de " + '<b>' + data.overall_aqi + '</b>'
 							}
 							
 							if (countryName == 'frenchGuiana'){
@@ -262,13 +250,23 @@ async function fetchCountry(countryName, apiToday, apiAqi, apiPast){
 							
 							displayProgressBar()		 
 							stopDisplay(countryName)
-								}
-)})}}})
-}
+							}
+)})}}})}
 
 //VARIABLES
 /////////////////////////////////////////////////////////////////////
+
 let counter = 0
+let country1961 = 0
+let country1962 = 0 
+let country1963 = 0 
+let country1964 = 0
+let country1965 = 0
+let country1966 = 0
+let country1967 = 0
+let country1968 = 0
+let country1969 = 0
+let country1970 = 0
 
 // API KEY FOR NINJAS-API
 const ninjaKey = {
@@ -291,7 +289,6 @@ const apiGuyanaToday = 'https://api.open-meteo.com/v1/gfs?latitude=5.00&longitud
 const apiEcuadorToday = 'https://api.open-meteo.com/v1/gfs?latitude=-1.25&longitude=-78.25&hourly=temperature_2m&forecast_days=1'
 
 // 60's API VARIABLES
-
 const apiVenezuelaPast = 'https://archive-api.open-meteo.com/v1/era5?latitude=8.00&longitude=-66.00&start_date=1960-12-31&end_date=1970-12-31&hourly=temperature_2m'
 const apiPeruPast = 'https://archive-api.open-meteo.com/v1/era5?latitude=-10.00&longitude=-75.25&start_date=1960-12-31&end_date=1970-12-31&hourly=temperature_2m'
 const apiUruguayPast = 'https://archive-api.open-meteo.com/v1/era5?latitude=-33.00&longitude=-56.00&start_date=1960-12-31&end_date=1970-12-31&hourly=temperature_2m'
@@ -304,7 +301,6 @@ const apiArgentinaPast = 'https://archive-api.open-meteo.com/v1/era5?latitude=-3
 const apiColombiaPast = 'https://archive-api.open-meteo.com/v1/era5?latitude=4.00&longitude=-73.25&start_date=1960-12-31&end_date=1970-12-31&hourly=temperature_2m'
 const apiGuyanaPast = 'https://archive-api.open-meteo.com/v1/era5?latitude=5.00&longitude=-59.00&start_date=1960-12-31&end_date=1970-12-31&hourly=temperature_2m'
 const apiEcuadorPast = 'https://archive-api.open-meteo.com/v1/era5?latitude=-1.25&longitude=-78.25&start_date=1960-12-31&end_date=1970-12-31&hourly=temperature_2m'
-
 
 // AIR QUALITY API LINKS
 const apiCaracasAqi = 'https://api.api-ninjas.com/v1/airquality?city=caracas'
@@ -321,9 +317,7 @@ const apiGeorgetownAqi = 'https://api.api-ninjas.com/v1/airquality?city=georgeto
 const apiQuitoAqi = 'https://api.api-ninjas.com/v1/airquality?city=quito'
 
 // FONCTION PRINCIPALE
-
 async function fonctionGlobale(){
-
 	fetchCountry('venezuela', apiVenezuelaToday, apiCaracasAqi, apiVenezuelaPast)
 	fetchCountry('peru', apiPeruToday, apiLimaAqi, apiPeruPast)
 	fetchCountry('uruguay', apiUruguayToday, apiMontevideoAqi, apiUruguayPast)
@@ -337,20 +331,7 @@ async function fonctionGlobale(){
 	fetchCountry('guyana', apiGuyanaToday, apiGeorgetownAqi, apiGuyanaPast)
 	fetchCountry('ecuador', apiEcuadorToday, apiQuitoAqi, apiEcuadorPast)
 	fetchCountry('frenchGuiana', apiEcuadorToday, apiQuitoAqi, apiEcuadorPast)
-
 }
 fonctionGlobale()
-
-// fetch(apiVenezuelaPast)
-// .then(response => response.json())
-// .then(res => console.log(res))
-// fetch(apiVenezuelaToday)
-// .then(response => response.json())
-// .then(res => console.log(res))
-
-
-
-
-
 
 	

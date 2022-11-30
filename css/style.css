@@ -193,3 +193,7 @@ div.bars{
     height:20px;
     width:50px;
 }
+
+#defilement {
+    z-index: 5;
+}
