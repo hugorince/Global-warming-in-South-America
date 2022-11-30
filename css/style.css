@@ -141,7 +141,6 @@ div.absolute{
 #bar{
     border-color: black;
     background-color: white;
-    border-width: .25rem;
     width: 30rem;
     height: 1rem;
     border-style: solid;
@@ -149,7 +148,14 @@ div.absolute{
     display: flex;
     margin: auto;
 
-    
+}
+
+#bar1{
+    border-radius: 7px 0 0 7px;
+}
+
+#bar12{
+    border-radius: 0 7px 7px 0;
 }
 
 div.bars{
@@ -164,7 +170,7 @@ div.bars{
 
 }
 .rouge{
-    background:red;
+    background:#C93232;
     height: 20px;
     width: 50px;
 }
@@ -193,3 +199,53 @@ div.bars{
     height:20px;
     width:50px;
 }
+
+div.bandeaufunfacts{
+    border-color: #EDB254;
+    background-color: rgb(154, 177, 201);
+    color: #ffffff;
+    font-weight: bold;
+    width: 161rem;
+    height: 2rem;
+    border-style: solid;
+    position:relative ;
+    margin: auto;
+    z-index: 4;
+    overflow: hidden;
+    left: -1rem;
+}
+
+.bandeau{
+    position: fixed;
+    top: 94%;
+}
+
+#scroll-text{
+    position: absolute;
+    -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 80s linear infinite;
+  -webkit-animation: my-animation 80s linear infinite;
+  animation: my-animation 80s linear infinite;
+}
+
+@-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  
+  }
