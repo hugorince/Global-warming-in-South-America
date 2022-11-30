@@ -7,10 +7,38 @@ body {
 
 h1 {
     color: rgb(255, 255, 255);
+    margin-bottom: 5px;    
+}
+
+.textBox{
+    border-color: black;
+    border-radius: 1rem;
+    background-color: white;
+    z-index: 5;
+    text-align: center;
+    font-family: 'Amatic SC', 'Amatic';
+    font-size: larger;
+    margin-inline: 10px;
+    
+   
 }
 
 img {
     height: 50rem;
+}
+
+#flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#graphics{
+    position: absolute;
+    left: 25%;
+    max-height: 50%;
+    top: -3rem;
+    
 }
 
 div.relative{ 
@@ -18,7 +46,7 @@ div.relative{
     max-height: 100%;
     width: auto;
     z-index: 0;
-    top:-2rem;
+    top:0rem;
 }
 
 div.absolute{
@@ -119,11 +147,14 @@ div.absolute{
     border-style: solid;
     border-radius: 1rem;
     display: flex;
+    margin: auto;
+
+    
 }
 
 div.bars{
     width: 3rem;
     height: 1rem;
-    background-color: red;
+    background-color: #C93232;
     z-index: -1;
 }
