@@ -7,39 +7,10 @@ body {
 
 h1 {
     color: rgb(255, 255, 255);
-    
-
-    
-}
-
-.textBox{
-    border-color: black;
-    border-radius: 1rem;
-    background-color: white;
-    z-index: 5;
-    text-align: center;
-    font-family: 'Amatic SC', 'Amatic';
-    font-size: larger;
-    margin-inline: 10px;
-    
-   
 }
 
 img {
     height: 50rem;
-}
-
-#flex-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#graphics{
-    position: absolute;
-    left: 25%;
-    max-height: 50%;
-    top: -3rem;
 }
 
 div.relative{ 
@@ -50,7 +21,6 @@ div.relative{
     top:-2rem;
 }
 
-
 div.absolute{
     position: absolute;
     top: 0px;
@@ -58,6 +28,13 @@ div.absolute{
     height: 8px;
     width: auto;
     z-index: 1;
+}
+
+#graphics{
+    position: absolute;
+    left: 25%;
+    max-height: 50%;
+    top: -3rem;
 }
 
 #informationsRight{
@@ -75,9 +52,15 @@ div.absolute{
     z-index: 2;
 }
 
-/* div.vagues{
-    position: relative;
-} */
+.textBox{
+    border-color: black;
+    border-radius: 1rem;
+    background-color: white;
+    text-align: center;
+    font-size: larger;
+    margin-inline: 10px;
+    
+}
 
 #vagueanime{
     height: 8rem;
@@ -136,7 +119,6 @@ div.absolute{
     border-style: solid;
     border-radius: 1rem;
     display: flex;
-    
 }
 
 div.bars{
@@ -144,5 +126,4 @@ div.bars{
     height: 1rem;
     background-color: red;
     z-index: -1;
-    
 }
