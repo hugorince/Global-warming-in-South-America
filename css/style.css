@@ -68,3 +68,38 @@ div.absolute{
     top: 50%;
     max-width: 25%;
 }
+.echelle{
+  direction: rtl;
+  display: flex;
+
+}
+.rouge{
+    background:red;
+    height: 20px;
+    width: 50px;
+}
+.rougePâle{
+    background:#E55757;
+    height: 20px;
+    width: 50px;
+}
+.orange{
+    background:#E87F56;
+    height:20px;
+    width: 50px;
+}
+.orangePâle{
+    background:#EDB254;
+    height:20px;
+    width:50px;
+}
+.Jaune{
+    background:#EFDC52;
+    height:20px;
+    width:50px;
+}
+.JaunePâle{
+    background:#EDED8A;
+    height:20px;
+    width:50px;
+}
