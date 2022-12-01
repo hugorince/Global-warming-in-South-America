@@ -373,23 +373,19 @@ async function fonctionGlobale(){
 }
 fonctionGlobale()
 
-fetch(apiVenezuelaPast)
-.then(response => response.json())
-.then(res => console.log(res))
-fetch(apiVenezuelaToday)
-.then(response => response.json())
-.then(res => console.log(res))
+// fetch(apiVenezuelaPast)
+// .then(response => response.json())
+// .then(res => console.log(res))
+// fetch(apiVenezuelaToday)
+// .then(response => response.json())
+// .then(res => console.log(res))
 
-fetch(apiQuitoAqi, ninjaKey)
-.then(res => res.json())
-.then(res => console.log(res))
+// fetch(apiQuitoAqi, ninjaKey)
+// .then(res => res.json())
+// .then(res => console.log(res))
 
 
 
 const funFacts = "L’endroit le plus profond de la mer n’a été visité que par trois personnes.  Quel est le comble pour un écolo ? Se mettre au vert...   DANEMARK : L’urine de festivaliers réutilisée pour cultiver de l’orge et brasser de la bière  Le pastis est écolo, car il préserve la couche d'eau jaune.   CHINE : Il crée une brique en aspirant les particules d’air pollué de Pékin. "
 document.getElementById("scroll-text").innerHTML = funFacts
 
-	
-"1961-12-01T-9:00"
-
-"1970-12-01T10:00"
