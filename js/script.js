@@ -98,19 +98,58 @@ async function fetchCountry(countryName, apiToday, apiAqi, apiPast){
 	let month = date.getMonth() + 1
 	let day = date.getDate()
 
-	let pastDate1961 = '1961-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1962 = '1962-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1963 = '1963-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1964 = '1964-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1965 = '1965-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1966 = '1966-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1967 = '1967-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1968 = '1968-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1969 = '1969-' + month + '-' + day + 'T-' + hour + ':00'
-	let pastDate1970 = '1970-' + month + '-' + day + 'T' + hour + ':00'
-	if (hour < 10){
-	pastDate1970 = '1970-' + month + '-' + day + 'T' + '0' + hour + ':00'
+	const createDate = (oneDate, num) =>{
+		
+		if (day < 10){
+			oneDate = num + '-' + month + '-' + '0' + day + 'T-' + hour + ':00'
+			}
+			if (hour < 10){
+				oneDate = num + '-' + month + '-' + day + 'T-' + hour + ':00'
+				}
+					if (hour < 10 && day < 10){
+						oneDate = num + '-' + month + '-' + '0' + day + 'T-' + hour + ':00'
+						}
+						if (month < 10){
+							oneDate = num + '-' + '0' + month + '-' + day + 'T-' + hour + ':00'
+						}
+							if (month < 10 && day < 10){
+							oneDate = num + '-' + '0' + month + '-' + '0' + day + 'T-' + hour + ':00'
+							}
+								if (month < 10 && day <10 && hour <10 ){
+									oneDate = num + '-' + '0' + month + '-' + '0' + day + 'T-' + hour + ':00'
+								}	
+		return oneDate
 	}
+
+let pastDate1961 = ''
+pastDate1961 = createDate(pastDate1961, '1961')
+let pastDate1962 = ''
+pastDate1962 = createDate(pastDate1962, '1962')
+let pastDate1963 = ''
+pastDate1963 = createDate(pastDate1963, '1963')
+let pastDate1964 = ''
+pastDate1964 = createDate(pastDate1964, '1964')
+let pastDate1965 = ''
+pastDate1965 = createDate(pastDate1965, '1965')
+let pastDate1966 = ''
+pastDate1966 = createDate(pastDate1966, '1966')
+let pastDate1967 = ''
+pastDate1967 = createDate(pastDate1967, '1967')
+let pastDate1968 = ''
+pastDate1968 = createDate(pastDate1968, '1968')
+let pastDate1969 = ''
+pastDate1969 = createDate(pastDate1969, '1969')
+
+	let pastDate1970 = '1970-' + month + '-' + day + 'T' + hour + ':00'
+		if (day < 10){
+			pastDate1970 = '1970-' + month + '-' + '0' + day + 'T' + hour + ':00'
+			}
+			if (hour < 10){
+				pastDate1970 = '1970-' + month + '-' + day + 'T' + hour + ':00'
+				}
+				if (hour < 10 && day < 10){
+					pastDate1970 = '1970-' + month + '-' + '0' + day + 'T' + hour + ':00'
+					}
 	console.log(pastDate1961)
 
 	async function fetchApiToday(){
@@ -334,12 +373,16 @@ async function fonctionGlobale(){
 }
 fonctionGlobale()
 
-// fetch(apiVenezuelaPast)
-// .then(response => response.json())
-// .then(res => console.log(res))
-// fetch(apiVenezuelaToday)
-// .then(response => response.json())
-// .then(res => console.log(res))
+fetch(apiVenezuelaPast)
+.then(response => response.json())
+.then(res => console.log(res))
+fetch(apiVenezuelaToday)
+.then(response => response.json())
+.then(res => console.log(res))
+
+fetch(apiQuitoAqi, ninjaKey)
+.then(res => res.json())
+.then(res => console.log(res))
 
 
 
@@ -347,3 +390,6 @@ const funFacts = "L’endroit le plus profond de la mer n’a été visité que 
 document.getElementById("scroll-text").innerHTML = funFacts
 
 	
+"1961-12-01T-9:00"
+
+"1970-12-01T10:00"
