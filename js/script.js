@@ -100,6 +100,9 @@ async function fetchCountry(countryName, apiToday, apiAqi, apiPast){
 
 	const createDate = (oneDate, num) =>{
 		
+		if (day > 10){
+			oneDate = num + '-' + month + '-' + day + 'T-' + hour + ':00'
+		}
 		if (day < 10){
 			oneDate = num + '-' + month + '-' + '0' + day + 'T-' + hour + ':00'
 			}
